@@ -106,3 +106,16 @@ function handleData2(data){
 
 //call the function with callback
 fetchingdata(handleData2);
+
+
+async function checkData(){
+    console.log("Starting the operation");
+
+    let data = await fetch("https://jsonplaceholder.typicode.com/posts")
+    let new_data = data.json();
+
+    console.log("data for operation :", new_data)
+
+}
+checkData();
+console.log("Operation is completed")
